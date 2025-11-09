@@ -1,0 +1,294 @@
+/* ===== تنسيقات لوحة التحكم ===== */
+
+.dashboard-content {
+  padding: 2rem 0;
+  min-height: calc(100vh - 80px);
+}
+
+/* بطاقات الإحصائيات */
+.stats-cards {
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.learning-stat::before {
+  background: var(--gradient-primary);
+}
+
+.tools-stat::before {
+  background: var(--gradient-secondary);
+}
+
+.tests-stat::before {
+  background: var(--gradient-accent);
+}
+
+.favorites-stat::before {
+  background: var(--gradient-warning);
+}
+
+.stat-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.learning-stat .stat-icon {
+  background: var(--gradient-primary);
+}
+
+.tools-stat .stat-icon {
+  background: var(--gradient-secondary);
+}
+
+.tests-stat .stat-icon {
+  background: var(--gradient-accent);
+}
+
+.favorites-stat .stat-icon {
+  background: var(--gradient-warning);
+}
+
+.stat-content h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.stat-content p {
+  color: var(--gray-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* قسم الفلاتر */
+.filter-section {
+  margin-bottom: 2rem;
+}
+
+.filter-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+}
+
+.filter-card h5 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-card .form-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--dark-color);
+  backdrop-filter: blur(10px);
+}
+
+.filter-card .form-select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+}
+
+/* خيارات العرض */
+.view-options {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-options .btn-group {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius);
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-options .btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.view-options .btn:not(.active) {
+  background: transparent;
+  color: var(--dark-color);
+}
+
+.view-options .btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.view-options .btn:hover:not(.active) {
+  background: rgba(106, 13, 173, 0.1);
+  color: var(--primary-color);
+}
+
+/* قسم النتائج */
+.results-section {
+  margin-top: 2rem;
+}
+
+/* عرض الشبكة (Grid View) */
+.grid-view .dashboard-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.grid-view .dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.grid-view .card-header {
+  background: transparent;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.grid-view .card-header h5 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.grid-view .card-body {
+  padding: 1rem 0;
+}
+
+.grid-view .card-footer {
+  padding: 1rem 0 0 0;
+  border-top: 1px solid var(--gray-light);
+}
+
+/* عرض القائمة (List View) */
+.list-view .dashboard-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.list-view .dashboard-card:hover {
+  transform: translateX(-5px);
+  box-shadow: var(--shadow);
+}
+
+.list-view .card-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.list-view .card-content {
+  flex: 1;
+}
+
+.list-view .card-content h5 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.list-view .card-content p {
+  color: var(--gray-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.list-view .card-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-view .card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* تحسينات الوضع الداكن للوحة التحكم */
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .filter-card,
+[data-theme="dark"] .grid-view .dashboard-card,
+[data-theme="dark"] .list-view .dashboard-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .view-options .btn-group {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .filter-card .form-select {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--dark-color);
+}
+
+[data-theme="dark"] .filter-card .form-select:focus {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--primary-color);
+}

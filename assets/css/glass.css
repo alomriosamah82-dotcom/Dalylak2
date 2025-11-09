@@ -1,0 +1,275 @@
+/* ===== تأثيرات الزجاج الشفاف (Glassmorphism) ===== */
+
+/* تأثير الزجاج الأساسي */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+}
+
+.glass-effect-light {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-effect-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* تأثيرات الزجاج للعناصر التفاعلية */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent
+  );
+  transition: var(--transition-slow);
+}
+
+.glass-card:hover::before {
+  left: 100%;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* أزرار الزجاج */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--dark-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: var(--dark-color);
+}
+
+.glass-btn-primary {
+  background: rgba(106, 13, 173, 0.2);
+  border: 1px solid rgba(106, 13, 173, 0.3);
+  color: var(--primary-color);
+}
+
+.glass-btn-primary:hover {
+  background: rgba(106, 13, 173, 0.3);
+  color: var(--primary-color);
+}
+
+/* تأثيرات الزجاج للشريط الجانبي */
+.glass-sidebar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تأثيرات الزجاج للرأس */
+.glass-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تأثيرات الزجاج للنماذج */
+.glass-input {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--dark-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(106, 13, 173, 0.3);
+  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.1);
+  outline: none;
+}
+
+.glass-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* تأثيرات الزجاج للقوائم */
+.glass-list {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.glass-list-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.glass-list-item:last-child {
+  border-bottom: none;
+}
+
+.glass-list-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* تأثيرات الزجاج للتنبيهات */
+.glass-alert {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.glass-alert-success {
+  background: rgba(64, 224, 208, 0.2);
+  border-color: rgba(64, 224, 208, 0.3);
+  color: var(--success-color);
+}
+
+.glass-alert-warning {
+  background: rgba(248, 150, 30, 0.2);
+  border-color: rgba(248, 150, 30, 0.3);
+  color: var(--warning-color);
+}
+
+.glass-alert-danger {
+  background: rgba(230, 57, 70, 0.2);
+  border-color: rgba(230, 57, 70, 0.3);
+  color: var(--danger-color);
+}
+
+/* تأثيرات الزجاج للوضع الداكن */
+[data-theme="dark"] .glass-effect,
+[data-theme="dark"] .glass-effect-light,
+[data-theme="dark"] .glass-card,
+[data-theme="dark"] .glass-btn,
+[data-theme="dark"] .glass-input,
+[data-theme="dark"] .glass-list,
+[data-theme="dark"] .glass-alert {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .glass-btn:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .glass-input {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--dark-color);
+}
+
+[data-theme="dark"] .glass-input:focus {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .glass-list-item:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* تأثيرات إضافية للزجاج */
+.glass-glow {
+  box-shadow: 
+    0 8px 32px rgba(106, 13, 173, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-glow:hover {
+  box-shadow: 
+    0 12px 40px rgba(106, 13, 173, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* تأثيرات الزجاج للصور */
+.glass-image-container {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.glass-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.glass-image-container:hover::before {
+  opacity: 1;
+}
+
+.glass-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.glass-image-container:hover img {
+  transform: scale(1.05);
+}

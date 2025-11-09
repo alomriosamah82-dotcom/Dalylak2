@@ -1,0 +1,591 @@
+/* ===== التجاوب مع مختلف الشاشات ===== */
+
+/* شاشات كبيرة (أكثر من 1200px) */
+@media (min-width: 1200px) {
+  .container-fluid {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+/* شاشات متوسطة (992px - 1199px) */
+@media (max-width: 1199px) {
+  .main-tabs .nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .stats-cards .col-lg-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* شاشات صغيرة (768px - 991px) */
+@media (max-width: 992px) {
+  .dashboard-container {
+    padding-top: 70px;
+  }
+  
+  .main-navbar {
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+  
+  .main-tabs {
+    margin: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .main-tabs .nav-link {
+    margin: 0.25rem 0;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .floating-theme-btn {
+    bottom: 5.5rem; /* تعديل الموقع في الشاشات الصغيرة */
+    left: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .fixed-search-container {
+    width: 95%;
+    bottom: 0.5rem;
+  }
+  
+  /* تعديلات لوحة التحكم للشاشات الصغيرة */
+  .stats-cards .col-md-6 {
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .stat-content h3 {
+    font-size: 2rem;
+  }
+  
+  .view-options {
+    justify-content: center;
+  }
+  
+  .list-view .dashboard-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .list-view .card-actions {
+    justify-content: center;
+  }
+}
+
+/* شاشات صغيرة جداً (576px - 767px) */
+@media (max-width: 768px) {
+  .welcome-content {
+    padding: 1.5rem;
+  }
+  
+  .animated-logo i {
+    font-size: 4rem;
+  }
+  
+  .animated-logo h1 {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .card-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .card-footer .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-content {
+    padding: 1.5rem 0;
+  }
+  
+  .floating-theme-btn {
+    bottom: 5rem;
+    left: 0.75rem;
+  }
+  
+  .fixed-search-container {
+    bottom: 0.25rem;
+  }
+  
+  /* تعديلات المدونة للشاشات الصغيرة */
+  .blog-post-card {
+    padding: 1.5rem;
+  }
+  
+  .post-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .blog-sidebar {
+    position: static;
+    margin-top: 2rem;
+  }
+  
+  /* تعديلات صفحة من نحن للشاشات الصغيرة */
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .values-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+  
+  .stat-box h3 {
+    font-size: 2rem;
+  }
+}
+
+/* شاشات الهواتف (أقل من 576px) */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .main-content {
+    padding: 1rem 0;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-footer {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .floating-theme-btn {
+    bottom: 4.5rem;
+    left: 0.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .fixed-search-container {
+    width: 98%;
+    bottom: 0.25rem;
+  }
+  
+  .fixed-search-container .search-input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .fixed-search-container .btn-search {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* تعديلات إضافية للهواتف */
+  .welcome-content {
+    padding: 1rem;
+  }
+  
+  .animated-logo i {
+    font-size: 3rem;
+  }
+  
+  .animated-logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .start-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* تعديلات لوحة التحكم للهواتف */
+  .stat-card {
+    padding: 1.25rem;
+  }
+  
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-content h3 {
+    font-size: 1.75rem;
+  }
+  
+  .filter-card {
+    padding: 1.25rem;
+  }
+  
+  .view-options .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* تعديلات المدونة للهواتف */
+  .blog-post-card {
+    padding: 1.25rem;
+  }
+  
+  .blog-post-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* تعديلات صفحة المفضلة للهواتف */
+  .favorites-actions {
+    padding: 1.25rem;
+  }
+  
+  .favorites-actions .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .favorites-actions .col-md-6 {
+    width: 100%;
+  }
+}
+
+/* تحسينات خاصة للشاشات العمودية على الهواتف */
+@media (max-width: 400px) and (orientation: portrait) {
+  .main-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .main-tabs .nav-link i {
+    font-size: 0.9rem;
+    margin-left: 0.25rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .features-list li {
+    font-size: 0.8rem;
+  }
+  
+  .floating-theme-btn {
+    bottom: 4rem;
+  }
+  
+  .fixed-search-container {
+    bottom: 0.15rem;
+  }
+}
+
+/* تحسينات خاصة للشاشات الأفقية على الهواتف */
+@media (max-height: 500px) and (orientation: landscape) {
+  .welcome-screen {
+    padding: 1rem 0;
+  }
+  
+  .welcome-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+  
+  .animated-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .animated-logo i {
+    font-size: 3rem;
+  }
+  
+  .animated-logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .start-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .gift-note {
+    font-size: 0.8rem;
+  }
+  
+  .floating-theme-btn {
+    bottom: 4rem;
+  }
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (min-width: 1400px) {
+  .container-fluid {
+    max-width: 1320px;
+  }
+  
+  .main-content {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+  }
+}
+
+/* تحسينات للوضع الداكن في جميع الشاشات */
+@media (max-width: 992px) {
+  [data-theme="dark"] .navbar-collapse {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border-radius: var(--border-radius);
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* تحسينات الأداء للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .floating-theme-btn:hover {
+    transform: scale(1.05) rotate(10deg);
+  }
+  
+  /* تقليل تأثيرات الرسوم المتحركة على الشاشات الصغيرة لتحسين الأداء */
+  .card::before,
+  .card-header::before {
+    animation: none;
+  }
+}
+
+/* تحسينات خاصة لشاشات اللمس */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover {
+    transform: none;
+  }
+  
+  .btn:hover,
+  .nav-link:hover,
+  .favorite-btn:hover {
+    transform: none;
+  }
+  
+  .floating-theme-btn:hover {
+    transform: none;
+  }
+}
+
+/* ===== إصلاحات القائمة المنسدلة ===== */
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    margin-top: 1rem;
+    padding: 1rem;
+    max-height: 70vh !important; /* تحديد ارتفاع أقصى */
+    overflow-y: auto !important; /* تمكين التمرير */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-xl);
+  }
+
+  [data-theme="dark"] .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-collapse.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* تحسين عرض عناصر القائمة */
+  .main-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .main-tabs .nav-link {
+    width: 100%;
+    text-align: right;
+    padding: 1rem 1.25rem;
+    margin: 0.25rem 0;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+  }
+
+  .main-tabs .nav-link:hover,
+  .main-tabs .nav-link.active {
+    background: rgba(106, 13, 173, 0.2);
+    transform: translateX(-5px);
+  }
+
+  [data-theme="dark"] .main-tabs .nav-link {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  [data-theme="dark"] .main-tabs .nav-link:hover,
+  [data-theme="dark"] .main-tabs .nav-link.active {
+    background: rgba(216, 191, 216, 0.2);
+  }
+
+  /* منع تخطي الجسم عند فتح القائمة */
+  body.navbar-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* تحسين زر القائمة */
+  .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.5);
+    outline: none;
+  }
+}
+
+/* تحسينات إضافية للشاشات الصغيرة جداً */
+@media (max-width: 576px) {
+  .navbar-collapse {
+    max-height: 60vh !important;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .main-tabs .nav-link {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .main-tabs .nav-link i {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+}
+
+/* تحسينات للشاشات العمودية على الهواتف */
+@media (max-width: 400px) and (orientation: portrait) {
+  .navbar-collapse {
+    max-height: 50vh !important;
+  }
+
+  .main-tabs .nav-link {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* تحسين شريط التمرير للقائمة */
+.navbar-collapse::-webkit-scrollbar {
+  width: 6px;
+}
+
+.navbar-collapse::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.navbar-collapse::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+.navbar-collapse::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+[data-theme="dark"] .navbar-collapse::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
