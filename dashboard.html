@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - دليلك التعليمي والعملي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/glass.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>
+                دليلك التعليمي والعملي
+            </a>
+            
+            <!-- زر القائمة المنسدلة للجوال -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- تبويبات الأقسام -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto main-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i>
+                            الصفحة الرئيسية
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">
+                            <i class="fas fa-tachometer-alt me-1"></i>
+                            لوحة التحكم
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="learning.html">
+                            <i class="fas fa-book me-1"></i>
+                            منصات التعلم
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tools.html">
+                            <i class="fas fa-robot me-1"></i>
+                            أدوات الذكاء الاصطناعي
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tests.html">
+                            <i class="fas fa-clipboard-check me-1"></i>
+                            الاختبارات والتقييم
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="work.html">
+                            <i class="fas fa-briefcase me-1"></i>
+                            العمل عبر الإنترنت
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="youtube.html">
+                            <i class="fab fa-youtube me-1"></i>
+                            قنوات يوتيوب
+                        </a>
+                    </li>
+ 
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle me-1"></i>
+                            من نحن؟
+                        </a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+<hr>
+
+<hr>
+
+<hr>
+
+<hr>
+
+<hr>
+<hr>
+
+
+    <!-- المحتوى الرئيسي -->
+    <div class="dashboard-content">
+        <div class="container-fluid">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-tachometer-alt me-2"></i>
+                    لوحة التحكم
+                </h2>
+                <p class="section-subtitle">مركز التحكم الشامل لجميع أقسام دليلك التعليمي والعملي</p>
+            </div>
+
+            <!-- بطاقات الإحصائيات -->
+            <div class="row stats-cards">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card learning-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="learning-count">0</h3>
+                            <p>منصة تعليمية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card tools-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="tools-count">0</h3>
+                            <p>أداة ذكاء اصطناعي</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card tests-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="tests-count">0</h3>
+                            <p>اختبار وتقييم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card favorites-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="favorites-count">0</h3>
+                            <p>عنصر في المفضلة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الفلاتر الذكية -->
+            <div class="filter-section">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="filter-card">
+                            <h5><i class="fas fa-filter me-2"></i>فلترة حسب التصنيف</h5>
+                            <select class="form-select" id="category-filter">
+                                <option value="">جميع التصنيفات</option>
+                                <option value="تعليم">تعليم</option>
+                                <option value="برمجة">برمجة</option>
+                                <option value="تقني">تقني</option>
+                                <option value="لغات">لغات</option>
+                                <option value="مهني">مهني</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="filter-card">
+                            <h5><i class="fas fa-language me-2"></i>فلترة حسب اللغة</h5>
+                            <select class="form-select" id="language-filter">
+                                <option value="">جميع اللغات</option>
+                                <option value="العربية">العربية</option>
+                                <option value="الإنجليزية">الإنجليزية</option>
+                                <option value="مختلط">مختلط</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="filter-card">
+                            <h5><i class="fas fa-signal me-2"></i>فلترة حسب المستوى</h5>
+                            <select class="form-select" id="level-filter">
+                                <option value="">جميع المستويات</option>
+                                <option value="مبتدئ">مبتدئ</option>
+                                <option value="متوسط">متوسط</option>
+                                <option value="متقدم">متقدم</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عرض الشبكة/القائمة -->
+            <div class="view-options mb-4">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active" id="grid-view">
+                        <i class="fas fa-th"></i> عرض الشبكة
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" id="list-view">
+                        <i class="fas fa-list"></i> عرض القائمة
+                    </button>
+                </div>
+            </div>
+
+            <!-- نتائج البحث -->
+            <div class="results-section">
+                <div class="row" id="dashboard-results">
+                    <!-- سيتم تعبئة النتائج ديناميكيًا -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر الوضع الداكن العائم -->
+    <button id="theme-toggle-floating" class="floating-theme-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- شريط البحث الثابت -->
+    <div class="fixed-search-container">
+        <div class="search-container">
+            <input type="text" class="form-control search-input" id="global-search-input" placeholder="ابحث هنا...">
+            <button class="btn btn-search" id="global-search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+</html>
